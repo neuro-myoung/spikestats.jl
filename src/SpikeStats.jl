@@ -10,11 +10,9 @@ using Distributions
 include("poissonSpikeModels.jl")
 include("computeCV.jl")
 include("computeFano.jl")
-include("acf.jl")
+include("spikeCorr.jl")
 include("spikeTriggeredAvgFuncs.jl")
 include("whiteNoiseGenerator.jl")
-include("ccf.jl")
 
-export poissonSpikes, computeCV, computeFano, poissonSpikesRefractory, poissonSpikesVarRate, acf, spikeTriggeredAvg, 
-whiteNoiseGenerator, spikeTriggeredAvgNDimFilter, ccf, poissonSpikesStim
+export poissonSpikes, computeCV, computeFano, poissonSpikesRefractory, poissonSpikesVarRate,spikeTriggeredAvg, spikeCorr, whiteNoiseGenerator, spikeTriggeredAvgNDimFilter, poissonSpikesStim
 end

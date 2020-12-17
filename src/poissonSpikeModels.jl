@@ -6,17 +6,17 @@
 Simulate a Poisson spiking model.
 
 # Arguments
-T: Length of simulation in seconds
-<br>
-freq: A constant denoting the firing frequency or a 1D Array of frequencies over the entire simulated 
-interval. If an array is given the array length must be equal to T/interval.
-<br>
-interval: Sampling interval for the simulation in seconds.
-<br>
-seed: An optional argument setting the seed for the random number generator.
+T=Length of simulation in seconds\\
+\\
+freq=A constant denoting the firing frequency or a 1D Array of frequencies over the entire simulated 
+interval. If an array is given the array length must be equal to T/interval.\\
+\\
+interval=Sampling interval for the simulation in seconds.\\
+\\
+seed=set seed (optional)
 
 # Output
-spikes: An array of spike times in seconds.
+spikes=An array of spike times in seconds.
 
 # Example
 ```julia-repl
