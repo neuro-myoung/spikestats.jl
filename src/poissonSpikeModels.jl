@@ -1,3 +1,16 @@
+# can I make separate rate functions and simply use the general poissonSpikes function
+
+"""
+Simulate a Poisson spiking model.
+
+# Arguments
+T: Length of simulation in seconds
+freq: Either a constant denoting the firing frequency or a 1D Array of frequencies over the entire simulated interval. If an array is given the array length must be equal to T/interval.
+interval: Sampling interval for the simulation in seconds.
+
+# Output
+spikes: An array of spike times in seconds.
+"""
 function poissonSpikes(T,freq,interval,seed=1)
 	rng = MersenneTwister(seed)
 	randArr = rand!(rng, zeros(Int(T/interval)))
