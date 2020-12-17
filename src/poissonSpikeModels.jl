@@ -2,7 +2,7 @@ function poissonSpikes(T,freq,interval,seed=1)
 	rng = MersenneTwister(seed)
 	randArr = rand!(rng, zeros(Int(T/interval)))
 	if isa(freq, Array)
-		spikes = findall(x -> x == true, randArr .< model1FR .* interval) .* interval
+		spikes = findall(x -> x == true, randArr .< freq .* interval) .* interval
 	else
 		spikes = findall(x -> x < freq * interval, randArr)/(1/interval)
 	end
