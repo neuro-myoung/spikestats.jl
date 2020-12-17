@@ -1,15 +1,28 @@
 # can I make separate rate functions and simply use the general poissonSpikes function
 
 """
+		poissonSpikes(T, freq, interval, seed=1)
+		
 Simulate a Poisson spiking model.
 
 # Arguments
 T: Length of simulation in seconds
-freq: Either a constant denoting the firing frequency or a 1D Array of frequencies over the entire simulated interval. If an array is given the array length must be equal to T/interval.
+<br>
+freq: A constant denoting the firing frequency or a 1D Array of frequencies over the entire simulated 
+interval. If an array is given the array length must be equal to T/interval.
+<br>
 interval: Sampling interval for the simulation in seconds.
+<br>
+seed: An optional argument setting the seed for the random number generator.
 
 # Output
 spikes: An array of spike times in seconds.
+
+# Example
+```julia-repl
+julia> poissonSpikes(0.25, 50, 0.001)
+Float64[0.004, 0.018, 0.057, 0.113, 0.168]
+```
 """
 function poissonSpikes(T,freq,interval,seed=1)
 	rng = MersenneTwister(seed)
